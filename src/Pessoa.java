@@ -26,6 +26,7 @@ public class Pessoa {
         this.cpf = cpf;
     }
 
+<<<<<<< HEAD
     @Override
     public String toString() {
         return "{" +
@@ -37,4 +38,8 @@ public class Pessoa {
 
     }
 
+=======
+
+    }
+>>>>>>> a056c9559ae38f84bbed4c078e0f21d744e1c3a5
 }
