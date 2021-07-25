@@ -6,8 +6,6 @@ public class SistemaImobiliario {
 
     public static void main(String[] args) {
 
-
-
         int opcao = 0;
         do {
             IO.mostrarTexto("\n\n[1] Novo imovel. ");
@@ -17,11 +15,11 @@ public class SistemaImobiliario {
             opcao = IO.digitarValores().nextInt();
 
             if (opcao != 3) {
-                if(opcao == 1){
+                if (opcao == 1) {
                     Imovel imovel = cadastrarImovel();
                     listaImoveis.add(imovel);
 
-                } else if (opcao == 2){
+                } else if (opcao == 2) {
                     listarImoveis();
 
 
@@ -31,16 +29,17 @@ public class SistemaImobiliario {
         } while (opcao != 3);
 
     }
-    public static void listarImoveis(){
 
-        if (listaImoveis.isEmpty()){
+    public static void listarImoveis() {
+
+        if (listaImoveis.isEmpty()) {
             IO.mostrarTexto("Nao existe imoveis cadastrados");
 
 
-        }else {
+        } else {
             IO.mostrarTexto("Lista de imoveis cadastrados:  ");
 
-            for (Imovel imovel: listaImoveis){
+            for (Imovel imovel : listaImoveis) {
                 IO.mostrarTexto("Imovel\n ");
 
                 System.out.println(imovel);
@@ -48,7 +47,6 @@ public class SistemaImobiliario {
 
 
         }
-
 
 
     }
@@ -65,22 +63,6 @@ public class SistemaImobiliario {
         String bairro = IO.digitarValores().next();
         IO.mostrarTexto("Digite o cep: ");
         String cep = IO.digitarValores().next();
-    }
-
-        public static void validarMoradorPorCpf(cpf) throws Exception{
-            for (Pessoa morador : moradores){
-                if (morador.getCpf().equals(cpf)){
-                    throw new Exception("Nao é possivel cadastrar o morador, pois ja existe um morador com este cpf.");
-                }
-            }
-        }
-        public static void adcionarMorador(Pessoa morador) throws Exception{
-            validarMoradorPorCpf(morador.getCpf());
-            moradores.add(morador);
-        }
-
-    
-
         IO.mostrarTexto("Digite o complemento:");
         String complemento = IO.digitarValores().next();
         Endereco endereco = new Endereco(rua, numero, bairro, cep, complemento);
@@ -95,8 +77,7 @@ public class SistemaImobiliario {
         IO.mostrarTexto("Digite o cpf do funcionario: ");
         String cpfDoFuncionario = IO.digitarValores().next();
 
-        Funcionario funcionario = new Funcionario(nomeDoFuncionario,cpfDoFuncionario);
-
+        Funcionario funcionario = new Funcionario(nomeDoFuncionario, cpfDoFuncionario);
 
         List<Morador> listaMoradores = new ArrayList<>();
 
@@ -115,20 +96,17 @@ public class SistemaImobiliario {
                 IO.mostrarTexto("Digite o cpf do morador: ");
                 String cpfDoMorador = IO.digitarValores().next();
 
-                Morador morador = new Morador(nomeDoMorador,cpfDoMorador);
+                Morador morador = new Morador(nomeDoMorador, cpfDoMorador);
 
                 listaMoradores.add(morador);
 
             }
 
 
-
         } while (opcao != 2);
 
 
-
-
-        Imovel imovel = new Imovel(endereco,valorAluguel,funcionario,listaMoradores);
+        Imovel imovel = new Imovel(endereco, valorAluguel, funcionario, listaMoradores);
 
 
         System.out.println("Imovel cadastrado");
@@ -136,13 +114,6 @@ public class SistemaImobiliario {
 
         return imovel;
 
-
-
-
-
-
-
-
-
     }
+
 }

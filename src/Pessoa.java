@@ -26,20 +26,11 @@ public class Pessoa {
         this.cpf = cpf;
     }
 
-<<<<<<< HEAD
     @Override
     public String toString() {
-        return "{" +
+        return "Pessoa{" +
                 "nome='" + nome + '\'' +
                 ", cpf='" + cpf + '\'' +
                 '}';
-
-
-
     }
-
-=======
-
-    }
->>>>>>> a056c9559ae38f84bbed4c078e0f21d744e1c3a5
 }
