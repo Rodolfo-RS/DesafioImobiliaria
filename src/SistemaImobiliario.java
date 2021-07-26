@@ -1,11 +1,12 @@
 import java.util.ArrayList;
 import java.util.List;
-
+// classe Sistema imobiliario
 public class SistemaImobiliario {
+    // lista para percorrer a lista de imoveis
     private static List<Imovel> listaImoveis = new ArrayList<>();
 
     public static void main(String[] args) {
-
+        // aqui inicia o menu de opcoes usando o mostrar texto
         int opcao = 0;
         do {
             IO.mostrarTexto("\n\n[1] Novo imovel. ");
@@ -37,7 +38,7 @@ public class SistemaImobiliario {
 
 
         } else {
-            IO.mostrarTexto("Lista de imoveis cadastrados:  ");
+            IO.mostrarTexto("LISTA DE IMOVEIS CADASTRADOS:  ");
 
             for (Imovel imovel : listaImoveis) {
                 IO.mostrarTexto("Imovel\n ");
@@ -52,7 +53,7 @@ public class SistemaImobiliario {
     }
 
     public static Imovel cadastrarImovel() {
-        IO.mostrarTexto("Cadastro de imovel\n ");
+        IO.mostrarTexto("CADRATRO DE IMOVEL\n ");
 
         // Dados do endereco.
         IO.mostrarTexto("Por favor digite o nome da rua: ");
@@ -66,7 +67,7 @@ public class SistemaImobiliario {
         IO.mostrarTexto("Digite o complemento:");
         String complemento = IO.digitarValores().next();
         Endereco endereco = new Endereco(rua, numero, bairro, cep, complemento);
-
+        // dados do aluguel
         IO.mostrarTexto("Digite o valor do aluguel; ");
         double valorAluguel = IO.digitarValores().nextDouble();
 
@@ -109,7 +110,7 @@ public class SistemaImobiliario {
         Imovel imovel = new Imovel(endereco, valorAluguel, funcionario, listaMoradores);
 
 
-        System.out.println("Imovel cadastrado");
+        System.out.println("IMOVEL CADASTRADO");
         System.out.println(imovel);
 
         return imovel;

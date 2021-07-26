@@ -1,3 +1,4 @@
+// classe endereco e seus atributos encapsulados.
 public class Endereco {
     private String rua;
     private int numero;
@@ -5,9 +6,10 @@ public class Endereco {
     private String cep;
     private String complemento;
 
+    // Método construtor vazio
     public Endereco() {
     }
-
+    // Método construtor da classe endereco passando os argumentos.
     public Endereco(String rua, int numero, String bairro, String cep, String complemento) {
         this.rua = rua;
         this.numero = numero;
@@ -15,7 +17,7 @@ public class Endereco {
         this.cep = cep;
         this.complemento = complemento;
     }
-
+    // getters e setters
     public String getRua() {
         return rua;
     }
@@ -56,14 +58,15 @@ public class Endereco {
         this.complemento = complemento;
     }
 
+    // override para sobrepor o metodo e usar o endereco.
     @Override
     public String toString() {
-        return "Endereco{" +
-                "rua='" + rua + '\'' +
-                ", numero=" + numero +
-                ", bairro='" + bairro + '\'' +
-                ", cep='" + cep + '\'' +
-                ", complemento='" + complemento + '\'' +
+        return "Endereco { " +
+                "rua:'" + rua + '\''+
+                ", numero:" + numero +
+                ", bairro:'" + bairro + '\'' +
+                ", cep:'" + cep + '\'' +
+                ", complemento:'" + complemento + '\'' +
                 '}';
     }
 }

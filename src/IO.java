@@ -8,5 +8,5 @@ public class IO {
         return new Scanner(System.in);
     }
 
-
+    // Método IO  para não precisar usar varios souts ou varios scans.
 }
